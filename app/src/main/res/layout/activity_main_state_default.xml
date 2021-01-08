@@ -11,6 +11,7 @@
 
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_banner"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/activity_main_state_view_generate"
@@ -20,6 +21,7 @@
         app:srcCompat="@drawable/ic_ill" />
 
     <View
+        android:id="@+id/view_line1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_50sdp"
@@ -35,6 +37,7 @@
         app:layout_constraintBottom_toTopOf="@id/activity_main_state_view_validation" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_generateCodeIcon"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:adjustViewBounds="true"
@@ -61,6 +64,7 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_generate"
         android:layout_width="0dp"
         android:layout_height="@dimen/_130sdp"
         android:layout_marginStart="30dp"
@@ -128,6 +132,7 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView_checkValidateCodeIcon"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:adjustViewBounds="true"
@@ -156,6 +161,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_validate"
         android:layout_width="0dp"
         android:layout_height="@dimen/_130sdp"
         android:layout_marginStart="30dp"
