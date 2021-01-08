@@ -4,7 +4,6 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "47.0.0"
 
     defaultConfig {
         applicationId "com.alirnp.iraniannationalcode"
@@ -26,6 +25,8 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
 }
 
 dependencies {
@@ -33,7 +34,12 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "com.hanks:htextview-base:0.1.6"
+    implementation "com.hanks:htextview-evaporate:0.1.6"
 }

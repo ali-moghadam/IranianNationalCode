@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_state_constraintLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    tools:ignore="Overdraw">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_state_view_generate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ill" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_main_state_view_generate" />
+
+    <View
+        android:id="@+id/activity_main_state_view_generate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/shape_card_view_gray"
+        app:layout_constraintBottom_toTopOf="@id/activity_main_state_view_validation" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/ic_plus" />
+
+    <TextView
+        android:id="@+id/activity_main_state_textView_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:fontFamily="@font/iran_sans_bold"
+        android:gravity="center"
+        android:text="@string/generate_national_code"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_generate"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_gradient_orange"
+        android:fontFamily="@font/iran_sans_bold"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_validation">
+
+
+        <com.hanks.htextview.evaporate.EvaporateTextView
+            android:id="@+id/textView_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/sample_national_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_22sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_copyCode"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ripple"
+            android:padding="@dimen/_10sdp"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView_code"
+            app:layout_constraintTop_toBottomOf="@+id/textView_code"
+            app:srcCompat="@drawable/ic_copy" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_generateCode"
+            android:layout_width="@dimen/_42sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/ripple"
+            android:padding="@dimen/_10sdp"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/textView_code"
+            app:layout_constraintTop_toBottomOf="@+id/textView_code"
+            app:srcCompat="@drawable/ic_refresh" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/activity_main_state_view_validation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@drawable/shape_card_view_white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/ic_checked" />
+
+    <TextView
+
+        android:id="@+id/activity_main_state_textView_validate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:fontFamily="@font/iran_sans_bold"
+        android:gravity="center"
+        android:text="@string/validate_national_code"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintVertical_bias="0.8" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/shape_gradient_blue"
+        android:fontFamily="@font/iran_sans_bold"
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_state_view_validation"
+        app:layout_constraintVertical_bias="0.8">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/selector_edit_text"
+            android:gravity="center"
+            android:hint="@string/sample_national_code_2"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textSize="@dimen/_22sdp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageView_checkValidateCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageView_clear"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_code">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView_repeat2"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_37sdp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ripple"
+                android:paddingLeft="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:tint="@color/blue_2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_repeat1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imageView_repeat1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_tick"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <Button
+                android:id="@+id/imageView_repeat1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_37sdp"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:fontFamily="@font/iran_sans_bold"
+                android:text="@string/check"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageView_repeat2"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView_clear"
+            android:layout_width="@dimen/_37sdp"
+            android:layout_height="@dimen/_37sdp"
+            android:background="@drawable/shape_white_border"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_8sdp"
+            android:tint="@color/blue_2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_checkValidateCode"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imageView_checkValidateCode"
+            app:layout_constraintTop_toTopOf="@+id/imageView_checkValidateCode"
+            app:srcCompat="@drawable/ic_clear" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
