@@ -4,7 +4,7 @@
 <br />
 
 download and use sample app
-&nbsp; [![APK](https://img.shields.io/badge/APK-Demo-brightgreen.svg)](https://github.com/alipapital/IranianNationalCode/blob/master/files/iranian_national_code_v1.0.apkk)
+&nbsp; [![APK](https://img.shields.io/badge/APK-Demo-brightgreen.svg)](https://github.com/alipapital/IranianNationalCode/blob/master/files/iranian_national_code_v1.0.apk)
 <br />
 [demo.apk](https://github.com/alipapital/IranianNationalCode/blob/master/files/iranian_national_code_v1.0.apk)
 <br /><br />
